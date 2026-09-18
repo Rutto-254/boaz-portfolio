@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boaz Rutto | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= ANNOUNCEMENT BAR ================= -->
+    <div class="announcement-bar">
+        Welcome to my digital portfolio!
+        <span>Let's Build Together</span>
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            PORTFOLIO.
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav>
+            <ul class="nav-list" id="navList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-content">
+
+            <span class="tag">
+                MEET THE DEVELOPER
+            </span>
+
+            <h1>
+                BOAZ RUTTO
+            </h1>
+
+            <p>
+                I build clean, responsive, and user-friendly web
+                applications. Passionate about turning complex logic
+                into seamless front-end experiences.
+            </p>
+
+            <ul class="hero-features">
+
+                <li>
+                    Front-end developer & UI designer
+                </li>
+
+                <li>
+                    Experienced with creating responsive websites
+                </li>
+
+                <li>
+                    Focused on clean website design and performance
+                </li>
+
+            </ul>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="primary-btn">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE - SMALL IMAGE BOX -->
+        <div class="hero-image">
+
+            <div class="image-box">
+
+                <img
+                    src="profile.jpeg"
+                    alt="Boaz Rutto"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="projects" id="projects">
+
+        <h2>
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Here are some of the applications and designs I have built.
+        </p>
+
+
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h3>
+                    School Management System
+                </h3>
+
+                <p>
+                    Designed data flow diagrams and system architecture
+                    for a school management platform.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+                <p>
+                    A responsive personal portfolio built using HTML,
+                    CSS, and JavaScript.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Code →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <h3>
+                    Python Automation Tool
+                </h3>
+
+                <p>
+                    A custom Python application designed to manage
+                    files and automate data processing tasks.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Code →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div class="about-container">
+
+            <span class="small-heading">
+                ABOUT ME
+            </span>
+
+            <h2>
+                Building ideas into digital experiences.
+            </h2>
+
+            <p>
+                Hello! I am a passionate developer dedicated to building
+                impactful digital solutions. My journey involves mastering
+                modern web technologies, solving logical challenges, and
+                creating responsive interfaces that look great on any device.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+
+        <h2>
+            Get In Touch
+        </h2>
+
+        <p class="section-subtitle">
+            Have a project in mind or want to collaborate?
+            Send me a message.
+        </p>
+
+
+        <form id="contactForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Your Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                ></textarea>
+
+            </div>
+
+
+            <p id="formFeedback"></p>
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= WHATSAPP ================= -->
+    <a
+        href="https://wa.me/254759650678?text=Hello%2C%20I%20found%20your%20portfolio%20and%20want%20to%20connect!"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+    >
+        💬
+    </a>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="social-links">
+
+            <a href="#" target="_blank">
+                GitHub
+            </a>
+
+            <a href="#" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="#" target="_blank">
+                Twitter
+            </a>
+
+        </div>
+
+        <p>
+            © 2026 Boaz Rutto. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

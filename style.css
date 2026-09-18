@@ -1,0 +1,793 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   ANNOUNCEMENT BAR
+===================================================== */
+
+.announcement-bar {
+    height: 42px;
+    background: #1b191d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    color: #bdbdbd;
+    font-size: 13px;
+
+    border-bottom: 1px solid #29272b;
+}
+
+.announcement-bar span {
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: #121212;
+
+    border-bottom: 1px solid #252525;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-list a {
+    color: #c8c8c8;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffeb3b;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 8%;
+
+    gap: 70px;
+
+    background: #121212;
+}
+
+
+/* LEFT SIDE */
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+
+    background: #ffeb3b;
+    color: #121212;
+
+    padding: 5px 11px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    max-width: 600px;
+
+    color: #a9a9a9;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* FEATURES */
+
+.hero-features {
+    list-style: none;
+
+    margin-bottom: 30px;
+}
+
+.hero-features li {
+    color: #cfcfcf;
+
+    margin-bottom: 9px;
+
+    padding-left: 20px;
+
+    position: relative;
+}
+
+.hero-features li::before {
+    content: "▪";
+
+    position: absolute;
+    left: 0;
+
+    color: #ffeb3b;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #ffeb3b;
+    color: #121212;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #555;
+    color: white;
+}
+
+.secondary-btn:hover {
+    border-color: #ffeb3b;
+    color: #ffeb3b;
+}
+
+
+/* =====================================================
+   IMAGE SECTION
+===================================================== */
+
+/*
+   THIS IS THE IMPORTANT PART.
+
+   The image is NOT allowed to become full screen.
+   The image-box has a fixed maximum width and height.
+*/
+
+.hero-image {
+    width: 380px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SMALL PHOTO BOX */
+
+.image-box {
+    width: 340px;
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid #303030;
+
+    background: #222;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ACTUAL IMAGE */
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /*
+       Adjust this if you want to move the
+       person's face up/down.
+    */
+    object-position: center center;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects {
+    padding: 80px 8%;
+
+    background: #171717;
+
+    text-align: center;
+}
+
+.projects h2,
+.contact h2 {
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #999;
+
+    margin-bottom: 45px;
+}
+
+
+/* PROJECT GRID */
+
+.project-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+    background: #1d1d1d;
+
+    border: 1px solid #2d2d2d;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #ffeb3b;
+}
+
+.project-number {
+    color: #ffeb3b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #999;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+.project-link {
+    color: #ffeb3b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    padding: 100px 8%;
+
+    background: #121212;
+
+    text-align: center;
+}
+
+.about-container {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.small-heading {
+    color: #ffeb3b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.about h2 {
+    font-size: 35px;
+
+    margin: 15px 0 20px;
+}
+
+.about p {
+    color: #a5a5a5;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    padding: 80px 8%;
+
+    background: #171717;
+
+    text-align: center;
+}
+
+.contact form {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #2c2c2c;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #ccc;
+
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #333;
+
+    border-radius: 6px;
+
+    background: #121212;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #ffeb3b;
+}
+
+
+/* FEEDBACK */
+
+#formFeedback {
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #ffeb3b;
+
+    color: #121212;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #e5d62e;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp-float {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #25d366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    z-index: 999;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 30px;
+
+    background: #0d0d0d;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #bbb;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffeb3b;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        gap: 40px;
+    }
+
+    .hero-image {
+        width: 320px;
+    }
+
+    .image-box {
+        width: 300px;
+        height: 390px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #181818;
+
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+
+        padding: 15px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 55px 6%;
+
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-features {
+        display: inline-block;
+
+        text-align: left;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    /* IMAGE */
+
+    .hero-image {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .image-box {
+        width: 280px;
+        height: 350px;
+    }
+
+
+    /* PROJECTS */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects,
+    .contact {
+        padding: 65px 6%;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        padding: 70px 6%;
+    }
+
+    .about h2 {
+        font-size: 29px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .image-box {
+        width: 250px;
+        height: 320px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+}
